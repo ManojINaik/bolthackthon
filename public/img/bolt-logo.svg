@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="200" viewBox="0 0 500 200">
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a6bbce" />
+      <stop offset="100%" style="stop-color:#e0e8ef" />
+    </linearGradient>
+  </defs>
+  <style>
+    .logo-text {
+      fill: url(#logo-gradient);
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+    .logo-part1 {
+      font-size: 115px;
+    }
+    .logo-part2 {
+      font-size: 65px;
+    }
+  </style>
+  <g transform="translate(10, 120)">
+    <text class="logo-text logo-part1">bolt</text>
+    <text class="logo-text logo-part2" x="185" y="0">.new</text>
+  </g>
+</svg> 
