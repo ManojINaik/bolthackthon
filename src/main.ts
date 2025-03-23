@@ -1,16 +1,25 @@
 import "./main.css";
 import WebGL from "./webgl";
+import createSplineScene from "./splineScene";
 
 // Wait for the DOM to be ready before setting up event listeners
 document.addEventListener('DOMContentLoaded', function() {
   // We don't initialize WebGL immediately
   let webglInitialized = false;
+  let splineSceneInitialized = false;
   
   function initWebGL() {
     if (!webglInitialized) {
       WebGL();
       webglInitialized = true;
       console.log('WebGL initialized successfully');
+      
+      // Initialize Spline scene after WebGL
+      if (!splineSceneInitialized && document.getElementById('spline-container')) {
+        createSplineScene('spline-container');
+        splineSceneInitialized = true;
+        console.log('Spline scene initialized');
+      }
     }
   }
   
